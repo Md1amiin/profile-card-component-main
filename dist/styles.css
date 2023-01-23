@@ -1,0 +1,166 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-position: -760px -600px, 190px 340px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto, 550px;
+  display: grid;
+  place-items: center;
+}
+body .profile {
+  background-color: white;
+  height: 23.5rem;
+  width: 20.3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+body .profile .bg-pattern-card {
+  height: 38%;
+  width: 100%;
+}
+body .profile .victor_image {
+  border: 4px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .profile .userInfo {
+  position: absolute;
+  top: 63.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-areas: "name id" "city city";
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+body .profile .userName {
+  font-size: 18px;
+  grid-area: name;
+  color: hsl(229deg, 23%, 23%);
+}
+body .profile .userID {
+  align-self: center;
+  color: hsl(227deg, 10%, 46%);
+  grid-area: id;
+  font-size: 18px;
+}
+body .profile .residenceCity {
+  grid-area: city;
+  text-align: center;
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.85rem;
+}
+body .profile .profileInfoSection {
+  width: 100%;
+  position: absolute;
+  top: 76%;
+}
+body .profile .breakingLine {
+  border: 1px solid hsl(0deg, 0%, 90%);
+}
+body .profile .profileInfo {
+  display: grid;
+  grid-template-columns: 92px 92px 92px;
+  justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+  top: 1.45rem;
+  width: 80%;
+  margin: auto;
+}
+body .profile [class^=number] {
+  font-size: 1.1rem;
+  color: hsl(229deg, 23%, 23%);
+}
+body .profile [class^=number] + p {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: hsl(185deg, 75%, 39%);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-position: -400px -450px, 700px 1100px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1200px, 1000px;
+  }
+}/*# sourceMappingURL=styles.css.map */
